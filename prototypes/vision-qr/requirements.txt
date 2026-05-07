@@ -1,0 +1,15 @@
+# Vision QR - 依赖包
+
+# 核心依赖 (OpenCV 4.6.0+ 兼容)
+opencv-python>=4.6.0
+opencv-contrib-python>=4.6.0
+numpy>=1.21.0
+pyyaml>=5.4.0
+
+# 可选依赖（用于高级功能）
+# pupil-apriltags>=1.0  # AprilTag 检测（比 ArUco 更精确）
+# scipy>=1.10.0         # 优化算法
+
+# 开发依赖
+# pytest>=7.0          # 测试
+# black>=23.0          # 代码格式化
