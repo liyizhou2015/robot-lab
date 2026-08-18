@@ -1,0 +1,43 @@
+{
+  "robots": [
+    {
+      "robot_id": 0,
+      "name": "Robot-1",
+      "tag_id": 0,
+      "aux_tag_id": 100,
+      "ip_address": "192.168.4.101",
+      "port": 12345
+    },
+    {
+      "robot_id": 1,
+      "name": "Robot-2",
+      "tag_id": 1,
+      "aux_tag_id": 101,
+      "ip_address": "192.168.4.102",
+      "port": 12345
+    },
+    {
+      "robot_id": 2,
+      "name": "Robot-3",
+      "tag_id": 2,
+      "aux_tag_id": 102,
+      "ip_address": "192.168.4.103",
+      "port": 12345
+    }
+  ],
+  "world_mapper": {
+    "camera_height": 2.0,
+    "coordinate_system": {
+      "origin": "camera_projection_on_ground",
+      "x_axis": "right",
+      "y_axis": "forward",
+      "z_axis": "up"
+    }
+  },
+  "network": {
+    "protocol": "udp",
+    "command_port": 12345,
+    "status_port": 12346,
+    "heartbeat_interval": 1.0
+  }
+}

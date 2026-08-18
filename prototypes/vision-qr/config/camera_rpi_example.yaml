@@ -1,0 +1,45 @@
+# 树莓派4 + Camera Module 3 Wide 相机配置示例
+# 注意：这些值需要根据实际标定结果修改
+
+# 相机内参矩阵 (3x3)
+# 焦距和主点根据分辨率和镜头特性估算
+# Camera Module 3 Wide: 120°视角，短焦距
+# 1920x1080 分辨率下的典型值
+camera_matrix:
+  - [850.0, 0.0, 960.0]      # fx, 0, cx
+  - [0.0, 850.0, 540.0]      # 0, fy, cy
+  - [0.0, 0.0, 1.0]          # 0, 0, 1
+
+# 畸变系数 [k1, k2, p1, p2, k3]
+# 广角镜头通常有较大畸变，需要标定
+dist_coeffs:
+  - [0.15, -0.25, 0.0, 0.0, 0.0]
+
+# 图像尺寸 [width, height]
+image_size: [1920, 1080]
+
+# 相机离地面高度 (米)
+# 根据实际安装高度修改
+camera_height: 2.0
+
+# Camera Module 3 Wide 特有参数
+camera_model:
+  name: "Raspberry Pi Camera Module 3 Wide"
+  sensor: "IMX708"
+  resolution: [4608, 2592]    # 最大分辨率
+  fov_diagonal: 120           # 对角线视角 (度)
+  focal_length: 2.75          # 焦距 (mm)
+  
+# 工作分辨率 (降低以提高帧率)
+work_resolution: [1920, 1080]
+
+# 目标帧率
+target_fps: 30
+
+# 自动对焦设置 (Camera Module 3 支持)
+autofocus: false              # 建议手动对焦，避免跟踪时失焦
+lens_position: 0.0            # 对焦位置 (0=无穷远，建议根据高度调整)
+
+# 曝光设置
+exposure_time: 10000          # 曝光时间 (微秒)，根据光照调整
+analogue_gain: 1.0            # 模拟增益
